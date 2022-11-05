@@ -12,12 +12,15 @@ class config:
         else:
             user_desktop = os.environ["USERPROFILE"]
             user_desktop = fr"{user_desktop}\Desktop"
+            if os.pth.exists(user_desktop)==False:
+                user_desktop = os.environ["USERPROFILE"]
+                user_desktop = fr"{user_desktop}\Onedrive\Desktop"            
             with open(path_setting,"w") as f:
                 fld = filedialog.askdirectory(initialdir = user_desktop)
                 f.write(fld)
             self.setting_path = fld
             starter_txt = f"""cd {default_data_dir}
-cd SlipSys\py
+cd SlipSys\py\slipsys
 python SlipSys.py
 """
             with open(fr"{user_desktop}\start_app.bat","w",encoding="shift_jis") as f:
