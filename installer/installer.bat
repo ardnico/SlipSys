@@ -11,8 +11,15 @@ ECHO     git clone https://github.com/ardnico/SlipSys >> %startup_dile_dir%
 ECHO ) >> %startup_dile_dir%
 ECHO ECHO cd C:\work_space\SlipSys\py\slipsys ^> %USERPROFILE%\DeskTop\start_app.bat  >> %startup_dile_dir%
 ECHO ECHO python slipsys.py ^>^> %USERPROFILE%\DeskTop\start_app.bat  >> %startup_dile_dir%
+ECHO CALL C:\work_space\lib_installer.bat >> %startup_dile_dir%
+
+ECHO pip install pandas >> C:\work_space\lib_installer.bat
+ECHO pip install openpyxl >> C:\work_space\lib_installer.bat
+ECHO pip install xlrd >> C:\work_space\lib_installer.bat
 
 CALL %startup_dile_dir%
+
+ECHO . > C:\work_space\lib_installer.bat
 
 CD C:\work_space
 CD SlipSys\py\slipsys
