@@ -19,8 +19,7 @@ class config:
                 fld = filedialog.askdirectory(initialdir = user_desktop)
                 f.write(fld)
             self.setting_path = fld
-            starter_txt = f"""cd {default_data_dir}
-cd SlipSys\py\slipsys
+            starter_txt = f"""cd {os.getcwd()}
 python SlipSys.py
 """
             with open(fr"{user_desktop}\start_app.bat","w",encoding="shift_jis") as f:
