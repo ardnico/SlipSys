@@ -12,7 +12,7 @@ class config:
         else:
             user_desktop = os.environ["USERPROFILE"]
             user_desktop = fr"{user_desktop}\Desktop"
-            if os.pth.exists(user_desktop)==False:
+            if os.path.exists(user_desktop)==False:
                 user_desktop = os.environ["USERPROFILE"]
                 user_desktop = fr"{user_desktop}\Onedrive\Desktop"            
             with open(path_setting,"w") as f:
