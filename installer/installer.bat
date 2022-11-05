@@ -1,8 +1,8 @@
 whoami /priv | find "SeDebugPrivilege" > nul
 if %errorlevel% neq 0 (
-@@powershell start-process h%~0" -verb runas
-@echo ŠÇ—ÒŒ ŒÀ‚ª‚ ‚è‚Ü‚¹‚ñBŠÇ—ÒŒ ŒÀ‚ÅÀs‚µ‚Ü‚·
-@exit
+ï¿½@@powershell start-process ï¿½h%~0" -verb runas
+ï¿½@echo ï¿½Ç—ï¿½ï¿½ÒŒï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½Bï¿½Ç—ï¿½ï¿½ÒŒï¿½ï¿½ï¿½ï¿½Åï¿½ï¿½sï¿½ï¿½ï¿½Ü‚ï¿½
+ï¿½@exit
 )
 
 set startup_dile_dir="%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\update_slipsys.bat"
@@ -13,7 +13,7 @@ echo cd C:\work_space >> %startup_dile_dir%
 echo if exist C:\work_space\SlipSys ( >> %startup_dile_dir%
 echo     cd SlipSys >> %startup_dile_dir%
 echo     git pull >> %startup_dile_dir%
-echo )else( >> %startup_dile_dir%
+echo ) else ( >> %startup_dile_dir%
 echo     git clone https://github.com/ardnico/SlipSys >> %startup_dile_dir%
 echo ) >> %startup_dile_dir%
 
