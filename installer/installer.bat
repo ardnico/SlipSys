@@ -1,11 +1,11 @@
 whoami /priv | find "SeDebugPrivilege" > nul
 if %errorlevel% neq 0 (
-ã€€@powershell start-process â€%~0" -verb runas
-ã€€echo ç®¡ç†è€…æ¨©é™ãŒã‚ã‚Šã¾ã›ã‚“ã€‚ç®¡ç†è€…æ¨©é™ã§å®Ÿè¡Œã—ã¾ã™
-ã€€exit
+@@powershell start-process h%~0" -verb runas
+@echo ŠÇ—ÒŒ ŒÀ‚ª‚ ‚è‚Ü‚¹‚ñBŠÇ—ÒŒ ŒÀ‚ÅÀs‚µ‚Ü‚·
+@exit
 )
 
-set startup_dile_dir="C:\Users\leafs\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\update_slipsys.bat"
+set startup_dile_dir="%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\update_slipsys.bat"
 set desktop_bat=%USERPROFILE%\DeskTop\StartApp.bat
 
 echo mkdir C:\work_space > %startup_dile_dir%
