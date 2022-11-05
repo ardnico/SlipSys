@@ -16,6 +16,7 @@ ECHO CALL C:\work_space\lib_installer.bat >> %startup_dile_dir%
 ECHO pip install pandas >> C:\work_space\lib_installer.bat
 ECHO pip install openpyxl >> C:\work_space\lib_installer.bat
 ECHO pip install xlrd >> C:\work_space\lib_installer.bat
+ECHO pip install django >> C:\work_space\lib_installer.bat
 
 CALL %startup_dile_dir%
 
