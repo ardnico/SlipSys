@@ -1,10 +1,3 @@
-whoami /priv | find "SeDebugPrivilege" > nul
-if %errorlevel% neq 0 (
-�@@powershell start-process �h%~0" -verb runas
-�@echo �Ǘ��Ҍ���������܂���B�Ǘ��Ҍ����Ŏ��s���܂�
-�@exit
-)
-
 set startup_dile_dir="%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\update_slipsys.bat"
 set desktop_bat=%USERPROFILE%\DeskTop\StartApp.bat
 
