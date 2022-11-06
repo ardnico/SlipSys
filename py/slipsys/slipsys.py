@@ -13,19 +13,29 @@ class slipsys:
         os.chdir(r"C:\work_space\SlipSys\py\slipsys\django")
         subprocess.run(["python","manage.py","runserver","127.0.0.1:8000"])
     
-    def run_by_process(self):
-        serverprocess = Process(target=self.run_server ,args=())
-        serverprocess.start()
-        return serverprocess
+    def process_run_server(self):
+        process = Process(target=self.run_server ,args=())
+        process.start()
+        return process
+    
+    def launch_browser(self):
+        subprocess.Popen([r"C:\Program Files\Google\Chrome\Application\chrome.exe",r"http://127.0.0.1:8000"])
+    
+    def process_launch_browser(self):
+        process = Process(target=self.launch_browser ,args=())
+        process.start()
+        return process
     
     def launch_webbrowser(self):
         pass
     
     def main(self):
-        self.run_by_process()
         print('comming soon ...')        
 
 if __name__ == "__main__":
     instance = slipsys()
     instance.main()
-    # instance.run_server()
+    serverprocess = instance.process_run_server()
+    browserprocess = instance.process_launch_browser()
+
+    
