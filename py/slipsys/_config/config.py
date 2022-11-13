@@ -46,6 +46,9 @@ python SlipSys.py
     def __add_startup_file(self,text) -> None:
         with open(self.__startup_file,"r",encoding="shift_jis") as f:
             tmp_txt = f.read()
+        
+        if tmp_txt.find(text) != -1:
+            return
         # add text
         with open(self.__startup_file,"a",encoding="shift_jis") as f:
             f.write(f"{text}\n")
