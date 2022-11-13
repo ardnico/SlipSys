@@ -26,8 +26,9 @@ class Filemanagaer:
         current_year_name = self.get_year_name(current_year)
         current_year_name_with_dot = self.get_year_name_with_dot(current_year)
         current_month = str(int(dt.now().month))
-        project_name = file_path.split("\\")[-1].replace("データ","")
-        new_directory_name = fr"{file_path}\{current_year}_{current_year_name}\{current_year_name_with_dot}_{project_name}-{current_month}"
+        project_name = file_path.split("\\")[-1]
+        new_project_name = project_name.replace("データ","")
+        new_directory_name = fr"{file_path}\{current_year}_{current_year_name}\{current_year_name_with_dot}_{new_project_name}-{current_month}"
         os.makedirs(new_directory_name,exist_ok=True)
         default_files = glob(fr"{self.config.setting_path}\default\*")
         for file in default_files:
