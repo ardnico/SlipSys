@@ -9,8 +9,8 @@ class slipsys:
     def __init__(self) -> None:
         pass
     
-    def run_server(self):
-        os.chdir(r"C:\work_space\SlipSys\py\slipsys\django")
+    def run_server(self,work_dir=r"C:\work_space\SlipSys\py\slipsys\django"):
+        os.chdir(work_dir)
         subprocess.run(["python","manage.py","runserver","127.0.0.1:8000"])
     
     def process_run_server(self):
